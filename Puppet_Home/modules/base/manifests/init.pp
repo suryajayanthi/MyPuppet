@@ -3,4 +3,5 @@ class base {
   include ssh
   include tree
   include postfix
+  include mysql
 }
