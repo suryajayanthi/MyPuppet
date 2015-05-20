@@ -4,6 +4,7 @@ class ssh::install {
     'RedHat'  =>  "openssh-server",
     'Debian'  =>  "openssh-server",
     'Solaris' =>  "openssh",
+    default   =>  "ssh",
   }
   package {'ssh':
     ensure  =>  present,
