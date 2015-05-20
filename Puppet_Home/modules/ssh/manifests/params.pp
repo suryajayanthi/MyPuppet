@@ -1,18 +1,18 @@
 class ssh::params {
   case $::osfamily {
     'Debian': {
-      $sshd_package = 'ssh'
-      $sshd_service = 'ssh'
+      $sshd_package_name = 'ssh'
+      $sshd_service_name = 'ssh'
       $sshd_service_config = '/etc/ssh/sshd_config'
     }
     'Redhat': {
-      $sshd_package = 'openssh-server'
-      $sshd_service = 'sshd'
+      $sshd_package_name = 'openssh-server'
+      $sshd_service_name = 'sshd'
       $sshd_service_config = '/etc/ssh/sshd_config'
     }
     'Solaris': {
-      $sshd_package = 'SUNWssh'
-      $sshd_service = 'ssh'
+      $sshd_package_name = 'SUNWssh'
+      $sshd_service_name = 'ssh'
       $ssh_service_config = '/etc/ssh/sshd_config'
     }
     default: {
